@@ -6,10 +6,12 @@ authors = [
     { name = "nat-chan", email = "ogino.natsuki.tm@alumni.tsukuba.ac.jp" }
 ]
 dependencies = [
-    "ruff",
+    "ruff>=0.4.9",
     "mypy",
     "pydantic",
     "pip-tools>=7.4.1",
+    "ipykernel>=6.29.4",
+    "isort>=5.13.2",
 ]
 readme = "README.md"
 requires-python = ">= 3.10"
@@ -26,7 +28,7 @@ dev-dependencies = []
 allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/dep_solver"]
+packages = ["."]
 
 
 [tool.ruff]
