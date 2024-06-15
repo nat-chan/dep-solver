@@ -11,19 +11,38 @@
 -e file:.
 annotated-types==0.7.0
     # via pydantic
+build==1.2.1
+    # via pip-tools
+click==8.1.7
+    # via pip-tools
 mypy==1.10.0
     # via dep-solver
 mypy-extensions==1.0.0
     # via mypy
+packaging==24.1
+    # via build
+pip==24.0
+    # via pip-tools
+pip-tools==7.4.1
+    # via dep-solver
 pydantic==2.7.4
     # via dep-solver
 pydantic-core==2.18.4
     # via pydantic
+pyproject-hooks==1.1.0
+    # via build
+    # via pip-tools
 ruff==0.4.9
     # via dep-solver
+setuptools==70.0.0
+    # via pip-tools
 tomli==2.0.1
+    # via build
     # via mypy
+    # via pip-tools
 typing-extensions==4.12.2
     # via mypy
     # via pydantic
     # via pydantic-core
+wheel==0.43.0
+    # via pip-tools
