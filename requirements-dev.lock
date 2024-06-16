@@ -15,6 +15,10 @@ asttokens==2.4.1
     # via stack-data
 build==1.2.1
     # via pip-tools
+certifi==2024.6.2
+    # via requests
+charset-normalizer==3.3.2
+    # via requests
 click==8.1.7
     # via pip-tools
 comm==0.2.2
@@ -27,6 +31,8 @@ exceptiongroup==1.2.1
     # via ipython
 executing==2.0.1
     # via stack-data
+idna==3.7
+    # via requests
 ipykernel==6.29.4
     # via dep-solver
 ipython==8.25.0
@@ -51,6 +57,7 @@ nest-asyncio==1.6.0
     # via ipykernel
 packaging==24.1
     # via build
+    # via dep-solver
     # via ipykernel
 parso==0.8.4
     # via jedi
@@ -84,6 +91,8 @@ python-dateutil==2.9.0.post0
 pyzmq==26.0.3
     # via ipykernel
     # via jupyter-client
+requests==2.32.3
+    # via dep-solver
 ruff==0.4.9
     # via dep-solver
 setuptools==70.0.0
@@ -112,6 +121,8 @@ typing-extensions==4.12.2
     # via mypy
     # via pydantic
     # via pydantic-core
+urllib3==2.2.1
+    # via requests
 wcwidth==0.2.13
     # via prompt-toolkit
 wheel==0.43.0
