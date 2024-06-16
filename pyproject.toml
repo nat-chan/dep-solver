@@ -12,6 +12,8 @@ dependencies = [
     "pip-tools>=7.4.1",
     "ipykernel>=6.29.4",
     "isort>=5.13.2",
+    "packaging>=24.1",
+    "requests>=2.32.3",
 ]
 readme = "README.md"
 requires-python = ">= 3.10"
@@ -35,7 +37,10 @@ packages = ["."]
 line-length = 120
 indent-width = 4
 target-version = "py39"
-ignore = ["E701"]  # ignore https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-colon/
+ignore = [
+    "E701",  # ignore https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-colon/
+    "F401",  # ignore https://docs.astral.sh/ruff/rules/unused-import/
+]
 
 [tool.ruff.lint]
 exclude = [".venv"]
