@@ -2,6 +2,7 @@ import argparse
 from argparse import Namespace
 
 import requests
+from packaging.version import Version
 
 
 def get_pypi_versions(package_name: str):
@@ -17,9 +18,19 @@ def get_pypi_versions(package_name: str):
         return []
 
 
-def main():
-    package_name = "diffusers"
-    versions = get_pypi_versions(package_name)
-    versions.sort()
+def sort_versions(versions):
+    return sorted(versions, key=Version)
+
+
+def main(args: Namespace):
+    versions = get_pypi_versions(args.package)
+    versions.sort(key=Version)
     for version in versions:
         print(version)
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--package", type=str, help="パッケージ名", default="diffusers")
+    args = parser.parse_args()
+    main(args)
